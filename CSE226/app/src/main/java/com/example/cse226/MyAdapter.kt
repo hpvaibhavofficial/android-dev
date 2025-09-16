@@ -12,7 +12,7 @@ import android.widget.TextView
 class MyAdapter (private val context :Context,private val dataSource: List<MyItem>) : BaseAdapter(){
     private val inflater :LayoutInflater = LayoutInflater.from(context)
 
-    override fun getCount(): Int = dataSource.sizes
+    override fun getCount(): Int = dataSource.size
 
     override fun getItem(position: Int): Any =dataSource[position]
 

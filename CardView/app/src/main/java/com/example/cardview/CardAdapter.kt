@@ -25,7 +25,6 @@ class CardAdapter(
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.card_item,parent,false)
         return ViewHolder(view)
-
     }
 
     override fun getItemCount(): Int = items.size
