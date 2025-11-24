@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_customer_tabs"
+    app:startDestination="@id/homeFragment">
+
+    <!-- 1. HOME -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.helpinghands.ui.customer.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_serviceBookingFragment"
+            app:destination="@id/serviceBookingFragment" />
+    </fragment>
+
+    <!-- 2. ORDERS -->
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="com.example.helpinghands.ui.customer.orders.OrdersFragment"
+        android:label="Orders"
+        tools:layout="@layout/fragment_orders">
+
+        <!-- ⭐ This action was missing -->
+        <action
+            android:id="@+id/action_ordersFragment_to_orderDetailsFragment"
+            app:destination="@id/orderDetailsFragment" />
+    </fragment>
+
+    <!-- 3. CATEGORIES -->
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.example.helpinghands.ui.customer.categories.CategoriesFragment"
+        android:label="Categories"
+        tools:layout="@layout/fragment_categories" />
+
+    <!-- 4. PROFILE -->
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.helpinghands.ui.customer.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <!-- 5. SERVICE BOOKING -->
+    <fragment
+        android:id="@+id/serviceBookingFragment"
+        android:name="com.example.helpinghands.ui.customer.ServiceBookingFragment"
+        android:label="Book a Service"
+        tools:layout="@layout/fragment_service_booking" />
+
+    <!-- 6. ⭐ NEW → ORDER DETAILS (NECESSARY FOR SAFE ARGS) -->
+    <fragment
+        android:id="@+id/orderDetailsFragment"
+        android:name="com.example.helpinghands.ui.customer.orders.OrderDetailsFragment"
+        android:label="Order Details"
+        tools:layout="@layout/fragment_order_details">
+
+        <argument
+            android:name="order"
+            app:argType="com.example.helpinghands.data.model.Order" />
+    </fragment>
+
+</navigation>
+
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<navigation xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:id="@+id/nav_customer_tabs"-->
+<!--    app:startDestination="@id/homeFragment">-->
+
+<!--    &lt;!&ndash; 1. HOME FRAGMENT (UPDATED WITH ACTION) &ndash;&gt;-->
+<!--    <fragment-->
+<!--        android:id="@+id/homeFragment"-->
+<!--        android:name="com.example.helpinghands.ui.customer.home.HomeFragment"-->
+<!--        android:label="Home"-->
+<!--        tools:layout="@layout/fragment_home">-->
+<!--        &lt;!&ndash; ACTION ADDED HERE: Link to the booking page &ndash;&gt;-->
+<!--        <action-->
+<!--            android:id="@+id/action_homeFragment_to_serviceBookingFragment"-->
+<!--            app:destination="@id/serviceBookingFragment" />-->
+<!--    </fragment>-->
+
+<!--    &lt;!&ndash; 2. EXISTING TABS &ndash;&gt;-->
+<!--    <fragment-->
+<!--        android:id="@+id/ordersFragment"-->
+<!--        android:name="com.example.helpinghands.ui.customer.orders.OrdersFragment"-->
+<!--        android:label="Orders"-->
+<!--        tools:layout="@layout/fragment_orders" />-->
+
+<!--    <fragment-->
+<!--        android:id="@+id/categoriesFragment"-->
+<!--        android:name="com.example.helpinghands.ui.customer.categories.CategoriesFragment"-->
+<!--        android:label="Categories"-->
+<!--        tools:layout="@layout/fragment_categories" />-->
+
+<!--    <fragment-->
+<!--        android:id="@+id/profileFragment"-->
+<!--        android:name="com.example.helpinghands.ui.customer.profile.ProfileFragment"-->
+<!--        android:label="Profile"-->
+<!--        tools:layout="@layout/fragment_profile" />-->
+
+<!--    &lt;!&ndash; 3. NEW DESTINATION ADDED FOR SERVICE BOOKING (No sub-package) &ndash;&gt;-->
+<!--    <fragment-->
+<!--        android:id="@+id/serviceBookingFragment"-->
+<!--        android:name="com.example.helpinghands.ui.customer.ServiceBookingFragment"-->
+<!--        android:label="Book a Service"-->
+<!--        tools:layout="@layout/fragment_service_booking" />-->
+
+<!--</navigation>-->

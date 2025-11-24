@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color><color name="chip_pending">#FFC107</color>     <!-- Yellow -->
+    <color name="chip_success">#4CAF50</color>     <!-- Green -->
+    <color name="chip_primary">#2196F3</color>     <!-- Blue -->
+    <color name="chip_danger">#F44336</color>      <!-- Red -->
+    <color name="chip_neutral">#9E9E9E</color>     <!-- Grey -->
+    <color name="primary">#3F51B5</color>
+    <color name="purple_700">#3700B3</color>
+
+
+</resources>

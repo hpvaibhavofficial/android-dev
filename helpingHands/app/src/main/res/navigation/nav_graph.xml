@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <!-- 1. SPLASH SCREEN -->
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.helpinghands.ui.auth.SplashFragment"
+        android:label="Splash"
+        tools:layout="@layout/fragment_splash">
+
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/action_splashFragment_to_customerDashboardFragment"
+            app:destination="@id/customerDashboardFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/action_splashFragment_to_adminDashboardFragment"
+            app:destination="@id/adminDashboardFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- 2. LOGIN -->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.helpinghands.ui.auth.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+
+        <action
+            android:id="@+id/action_loginFragment_to_customerDashboardFragment"
+            app:destination="@id/customerDashboardFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/action_loginFragment_to_adminDashboardFragment"
+            app:destination="@id/adminDashboardFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+
+    <!-- 3. SIGN UP -->
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.helpinghands.ui.auth.SignUpFragment"
+        android:label="Sign Up"
+        tools:layout="@layout/fragment_signup">
+
+        <!-- Back to login -->
+        <action
+            android:id="@+id/action_signUpFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+
+        <!-- ⭐ NEW: Optional direct routing to customer dashboard -->
+        <action
+            android:id="@+id/action_signUpFragment_to_customerDashboardFragment"
+            app:destination="@id/customerDashboardFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+
+    <!-- 4. CUSTOMER DASHBOARD -->
+    <fragment
+        android:id="@+id/customerDashboardFragment"
+        android:name="com.example.helpinghands.ui.customer.CustomerDashboardFragment"
+        android:label="Customer Dashboard"
+        tools:layout="@layout/fragment_customer_dashboard" />
+
+
+    <!-- 5. ADMIN DASHBOARD -->
+    <fragment
+        android:id="@+id/adminDashboardFragment"
+        android:name="com.example.helpinghands.ui.admin.AdminDashboardFragment"
+        android:label="Admin Dashboard"
+        tools:layout="@layout/fragment_admin_dashboard" />
+
+</navigation>
