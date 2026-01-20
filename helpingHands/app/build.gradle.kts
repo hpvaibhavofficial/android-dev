@@ -3,10 +3,12 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("com.google.gms.google-services")
 
-    // --- ADDED PLUGINS ---
-    kotlin("kapt") // For Hilt annotation processing
-    id("com.google.dagger.hilt.android") // Hilt plugin
-    id("androidx.navigation.safeargs.kotlin") // Navigation Safe Args
+    // Hilt
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
+
+    // Navigation Safe Args
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -48,30 +50,25 @@ android {
 }
 
 dependencies {
+    // Firebase
     implementation(platform(libs.firebase.bom))
-
-    // Firebase SDKs
     implementation(libs.firebase.auth.ktx)
     implementation(libs.firebase.firestore.ktx)
     implementation(libs.firebase.storage.ktx)
-    implementation(libs.firebase.ktx)
+    implementation(libs.firebase.common.ktx)
 
-    // AndroidX Core
+    // AndroidX
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
 
-    // RecyclerView + CardView (ensure these are present)
+    // RecyclerView + CardView
     implementation("androidx.recyclerview:recyclerview:1.3.1")
     implementation("androidx.cardview:cardview:1.0.0")
 
-    // --- MVVM + HILT ---
-    implementation(libs.hilt.android)
-    kapt(libs.hilt.compiler)
-
-    // Lifecycle (MVVM)
+    // Lifecycle / MVVM
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -80,10 +77,20 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
 
-    // --- Glide (image loading) ---
-    // Glide runtime
+    // Hilt
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
+
+    // Retrofit + Gson
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.gson)
+
+    // OkHttp
+    implementation(libs.okhttp)
+    implementation(libs.okhttp.logging)
+
+    // Glide
     implementation("com.github.bumptech.glide:glide:4.16.0")
-    // Glide compiler (annotation processor) — use kapt
     kapt("com.github.bumptech.glide:compiler:4.16.0")
 
     // Testing

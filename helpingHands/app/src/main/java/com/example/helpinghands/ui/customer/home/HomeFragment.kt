@@ -56,12 +56,12 @@ class HomeFragment : Fragment() {
     private fun setupRecyclerViews() {
 
         // ⭐ Featured Products Adapter (Only onAddClick needed)
-        featuredAdapter = FeaturedProductAdapter(
-            onAddClick = { product ->
-                Toast.makeText(requireContext(), "Added: ${product.name}", Toast.LENGTH_SHORT).show()
-
-            }
-        )
+//        featuredAdapter = FeaturedProductAdapter(
+//            onAddClick = { product ->
+//                Toast.makeText(requireContext(), "Added: ${product.name}", Toast.LENGTH_SHORT).show()
+//
+//            }
+//        )
 
         binding.rvFeaturedProducts.apply {
             layoutManager = LinearLayoutManager(
