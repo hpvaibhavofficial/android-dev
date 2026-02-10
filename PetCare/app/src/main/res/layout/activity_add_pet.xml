@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login_gradient">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        app:cardCornerRadius="22dp"
+        app:cardElevation="14dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- Title -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Pet"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#3F2A1D"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="20dp"/>
+
+                <!-- Image -->
+                <ImageView
+                    android:id="@+id/imgPet"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_pet_placeholder"
+                    android:background="@drawable/bg_social_circle"
+                    android:padding="16dp"
+                    android:contentDescription="Pet image"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tap to upload image"
+                    android:textSize="13sp"
+                    android:textColor="#7C4A2D"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="20dp"/>
+
+                <!-- Name -->
+                <EditText
+                    android:id="@+id/etPetName"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:hint="Pet name"
+                    android:background="@drawable/bg_edittext_brown"
+                    android:padding="16dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <!-- Type -->
+                <EditText
+                    android:id="@+id/etType"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:hint="Type (Dog, Cat)"
+                    android:background="@drawable/bg_edittext_brown"
+                    android:padding="16dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <!-- Breed -->
+                <EditText
+                    android:id="@+id/etBreed"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:hint="Breed"
+                    android:background="@drawable/bg_edittext_brown"
+                    android:padding="16dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <!-- Age -->
+                <EditText
+                    android:id="@+id/etAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:hint="Age"
+                    android:inputType="number"
+                    android:background="@drawable/bg_edittext_brown"
+                    android:padding="16dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <!-- Gender -->
+                <EditText
+                    android:id="@+id/etGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:hint="Gender"
+                    android:background="@drawable/bg_edittext_brown"
+                    android:padding="16dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <!-- Price -->
+                <EditText
+                    android:id="@+id/etPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:hint="Price"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/bg_edittext_brown"
+                    android:padding="16dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <!-- Tags -->
+                <EditText
+                    android:id="@+id/etTags"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:hint="Tags (friendly, vaccinated)"
+                    android:background="@drawable/bg_edittext_brown"
+                    android:padding="16dp"
+                    android:layout_marginBottom="20dp"/>
+
+                <!-- Save -->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSavePet"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="Save Pet"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/bg_button_brown"
+                    android:backgroundTint="@null"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="true">
+
+    <!-- Extreme Top Left → Diagonal Right (safe) -->
+    <translate
+        android:fromXDelta="0%p"
+        android:fromYDelta="0%p"
+        android:toXDelta="45%p"
+        android:toYDelta="30%p"
+        android:duration="2000" />
+
+    <translate
+        android:startOffset="2000"
+        android:fromXDelta="45%p"
+        android:fromYDelta="30%p"
+        android:toXDelta="5%p"
+        android:toYDelta="70%p"
+        android:duration="2500" />
+
+</set>

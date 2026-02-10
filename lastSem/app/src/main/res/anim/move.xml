@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="true">
+
+    <!-- 1️⃣ small DOWN (anticipation) -->
+    <translate
+        android:fromXDelta="0%"
+        android:fromYDelta="0%"
+        android:toXDelta="0%"
+        android:toYDelta="10%"
+        android:duration="150"/>
+
+    <!-- 2️⃣ big UP + slight LEFT -->
+    <translate
+        android:fromXDelta="0%"
+        android:fromYDelta="10%"
+        android:toXDelta="-15%"
+        android:toYDelta="-120%"
+        android:startOffset="150"
+        android:duration="600"/>
+
+    <!-- 3️⃣ come BACK DOWN to original -->
+    <translate
+        android:fromXDelta="-15%"
+        android:fromYDelta="-120%"
+        android:toXDelta="0%"
+        android:toYDelta="0%"
+        android:startOffset="750"
+        android:duration="500"/>
+</set>
